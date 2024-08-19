@@ -1,0 +1,302 @@
+
+.room-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.section-title {
+  text-align: center;
+  font-size: 2em;
+  color: black;
+  margin-bottom: 60px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+}
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #01959a;
+  position: absolute;
+  bottom: -10px;
+  left: calc(50% - 40px);
+  border-radius: 2px;
+}
+/* Grid layout for room cards */
+.room-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Individual room card styling */
+.room-card {
+  position: relative;
+  background-color: #fff; /* White color for the card background */
+  border-radius: 10px;
+  border: 2px solid #01959a; /* Teal color for border */
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.room-card:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+/* Styling for image container */
+.room-img-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.room-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay for rating and likes */
+.overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 20px);
+}
+
+.rating,
+.likes {
+  font-size: 0.9em;
+}
+
+.star,
+.heart {
+  margin-right: 5px;
+}
+
+/* Room info styling */
+.room-info {
+  padding: 15px;
+  text-align: center;
+  flex: 1; /* Allows this section to grow and push the button down */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.room-title {
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: #333; /* Dark color for the title */
+}
+
+.room-desc {
+  color: #666; /* Gray color for description */
+  margin-bottom: 10px;
+}
+
+.room-desc2-rate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #666; /* Gray color for description and rate */
+}
+
+.room-desc2 {
+  margin: 0;
+}
+
+.room-rate {
+  font-weight: bold;
+  color: #01959a; /* Teal color for rate */
+}
+
+/* Button styling */
+.btn-room {
+  display: inline-block;
+  padding: 8px 16px; /* Smaller padding */
+  font-size: 0.9em; /* Smaller font size */
+  color: #fff;
+  background: #01959a;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  align-self: center; /* Center horizontally */
+  margin: 10px 0; /* Margin to create space above and below */
+}
+
+.btn-room:hover {
+  background-color: #017e82;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 770px) {
+    /* Maintain the grid layout but adjust the gap between cards */
+    .room-grid {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+  
+    /* Keep the room card styling consistent */
+    .room-card {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-width: 2px;
+    }
+  
+    /* Adjust the image container height */
+    .room-img-container {
+      height: 180px; /* Slightly smaller height for smaller screens */
+    }
+  
+    /* Keep the overlay for likes and stars visible and styled the same */
+    .overlay {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: calc(100% - 20px);
+      font-size: 0.9em; /* Keep font size similar */
+    }
+  
+    .rating,
+    .likes {
+      font-size: 0.9em; /* Keep the text size consistent */
+    }
+  
+    .star,
+    .heart {
+      margin-right: 5px;
+    }
+  
+    /* Maintain room info styling */
+    .room-info {
+      padding: 10px; /* Slightly reduce padding */
+      text-align: center;
+    }
+  
+    .room-title {
+      font-size: 1.3em; /* Slightly smaller for smaller screens */
+    }
+  
+    .room-desc {
+      font-size: 0.9em;
+      margin-bottom: 10px;
+    }
+  
+    .room-desc2-rate {
+      font-size: 0.9em;
+    }
+  
+    .room-rate {
+      font-size: 1em;
+      color: #01959a;
+    }
+  
+    .btn-room {
+      padding: 8px 16px;
+      font-size: 0.9em;
+    }
+  }
+  
+  /* Responsive design for even smaller screens */
+  @media (max-width: 480px) {
+
+    .room-img-container {
+      height: 150px;
+    }
+
+    .overlay {
+      font-size: 0.8em;
+    }
+  
+    .rating,
+    .likes {
+      font-size: 0.8em;
+    }
+  
+    .star,
+    .heart {
+      margin-right: 3px;
+    }
+  
+    .room-title {
+      font-size: 1.2em;
+    }
+  
+    .room-desc,
+    .room-desc2-rate {
+      font-size: 0.8em;
+    }
+  
+    .btn-room {
+      padding: 6px 12px;
+      font-size: 0.8em;
+    }
+  }
+/* Grid layout for room cards */
+.room-grid {
+    display: grid;
+    gap: 20px;
+    padding: 20px; /* Default padding */
+  }
+  
+  @media (min-width: 770px) {
+    .room-grid {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+  }
+  
+  @media (max-width: 769px) and (min-width: 601px) {
+    .room-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px; /* Adjust gap for this range */
+      padding: 15px; /* Adjust padding for this range */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .room-grid {
+      grid-template-columns: 1fr;
+      gap: 10px;
+      padding: 10px; 
+    }
+  }
+  
+  .room-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Ensure perfect margin adjustments */
+  .room-card {
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  

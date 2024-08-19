@@ -1,0 +1,153 @@
+/* Contact Section */
+.contact-section {
+  padding: 40px;
+  background-color: #ffffff; /* White background */
+  border-radius: 8px;
+}
+
+/* Contact Title */
+.Contact_title {
+  text-align: center;
+  font-size: 2em;
+  color: black;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.Contact_title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #01959a;
+  position: absolute;
+  bottom: -10px;
+  left: calc(50% - 40px);
+  border-radius: 2px;
+}
+
+/* Contact Content Layout */
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Contact Info Slider */
+.contact-info-slider {
+  width: 45%;
+  padding: 20px;
+  background-color: #333; /* Dark background for contact info */
+  color: white; /* Text color for contact info */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Info Styling */
+.contact-info p {
+  margin: 20px 0;
+  font-size: 20px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info i {
+  font-size: 24px;
+  margin-right: 10px;
+  color: #01959a; /* Icon color */
+}
+
+.contact-info a {
+  color: #01959a; /* Link color */
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Form Container */
+.contact-form-container {
+  width: 55%;
+  padding: 20px;
+  background-color: #ffffff; /* White background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Form Heading */
+.contact-form-container h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #333; /* Dark text color */
+  text-align: center;
+}
+
+/* Form Row */
+.contact-form .form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Form Group */
+.contact-form .form-group {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.contact-form .form-group:last-child {
+  margin-right: 0;
+}
+
+/* Input and Textarea Styling */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+/* Textarea Specific Styling */
+.contact-form textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: #01959a; /* Button background color */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #017f83; /* Darker color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 930px) {
+  .contact-content {
+    flex-direction: column; /* Stack sections vertically on smaller screens */
+  }
+
+  .contact-info-slider,
+  .contact-form-container {
+    width: 100%; /* Full width on smaller screens */
+    margin-bottom: 20px; /* Add spacing */
+  }
+}

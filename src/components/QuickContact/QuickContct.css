@@ -1,0 +1,51 @@
+.quick-contact {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 50px;
+    padding: 8px 14px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  .whatsapp-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: #25D366;
+  }
+  
+  .quick-contact:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 768px) {
+    .quick-contact {
+      bottom: 15px;
+      right: 15px;
+      padding: 7px 12px;
+    }
+  
+    .whatsapp-icon {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .quick-contact {
+      bottom: 10px;
+      right: 10px;
+      padding: 6px 10px;
+    }
+  
+    .whatsapp-icon {
+      font-size: 1.2rem;
+    }
+  }
+  

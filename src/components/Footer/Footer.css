@@ -1,0 +1,201 @@
+.footer {
+  background-color: #222; /* Dark background for footer */
+  color: #f4f4f4; /* Light text color */
+  padding: 40px 20px;
+  font-size: 16px;
+  text-align: left;
+  border-top: 5px solid #01959a; /* Decorative border at the top */
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Individual Footer Sections */
+.footer-section {
+  flex: 1;
+  margin: 0 10px;
+  min-width: 220px; /* Minimum width to ensure proper layout */
+  border-radius: 8px; /* Rounded corners for sections */
+  padding: 20px;
+  background-color: transparent; /* No background color */
+}
+
+/* About Section */
+.footer-section.about {
+  flex: 2; /* Larger flex for About section */
+}
+
+.footer-section.about h1 {
+  font-size: 32px;
+  color: #01959a;
+  margin-bottom: 15px;
+}
+
+.footer-section.about p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.book-now-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #01959a;
+  color: #ffffff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.book-now-btn:hover {
+  background-color: #017f83;
+  transform: scale(1.05);
+}
+
+/* Quick Links and Services Sections */
+.footer-section.quick-links,
+.footer-section.our-services,
+.footer-section.contact-us {
+  flex: 1; /* Equal flex for other sections */
+}
+
+.footer-section h2 {
+  font-size: 24px;
+  color: #01959a;
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #f4f4f4;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #017f83;
+}
+
+/* Contact Us Section */
+.footer-section.contact-us {
+  flex: 2; /* Larger flex for Contact Us section */
+}
+
+.footer-section.contact-us p {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footer-section.contact-us a {
+  color: #01959a;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.footer-section.contact-us a:hover {
+  text-decoration: underline;
+}
+
+/* Social Media Icons */
+.social-media {
+  margin-top: 15px;
+}
+
+.social-media a {
+  color: #f4f4f4;
+  text-decoration: none;
+  margin-right: 15px;
+  font-size: 24px; /* Size for icons */
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #017f83;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #444;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #888;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 930px) {
+  .footer-content {
+    flex-direction: column; /* Stack sections vertically on smaller screens */
+    align-items: center; /* Center align all content */
+  }
+
+  .footer-section {
+    margin: 10px 0; /* Adjust margin for stacked sections */
+    width: 100%; /* Full width for each section on smaller screens */
+    text-align: center; /* Center align text in all sections */
+  }
+
+  .footer-section.about {
+    order: 1; /* Ensure About section comes first */
+  }
+
+  .footer-section.quick-links {
+    order: 2; /* Order sections as needed */
+  }
+
+  .footer-section.our-services {
+    order: 3; /* Order sections as needed */
+  }
+
+  .footer-section.contact-us {
+    order: 4; /* Order sections as needed */
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    padding: 20px 10px; /* Reduced padding on very small screens */
+  }
+
+  .footer-section h2 {
+    font-size: 20px; /* Smaller font size for headings */
+  }
+
+  .footer-section p,
+  .footer-section ul li a {
+    font-size: 16px; /* Smaller font size for better readability */
+  }
+
+  .book-now-btn {
+    font-size: 16px; /* Smaller font size for buttons */
+    padding: 10px 20px; /* Adjust padding */
+  }
+
+  .social-media a {
+    font-size: 20px; /* Smaller size for social media icons */
+    margin-right: 10px; /* Reduced margin */
+  }
+
+  .footer-content {
+    align-items: center; /* Center align all content */
+  }
+
+  .footer-section {
+    text-align: center; /* Center align text in all sections */
+  }
+}
